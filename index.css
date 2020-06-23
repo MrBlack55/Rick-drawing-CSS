@@ -1,0 +1,246 @@
+body
+{
+	background: rgb(0,6,8);
+    background: linear-gradient(90deg, rgba(0,6,8,1) 0%, rgba(7,25,69,1) 100%);
+}
+
+.box
+{
+	position: relative;
+	width: 900px;
+	height: 900px;
+	margin: auto;
+}
+
+.hair
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #87CEFA;
+	-webkit-clip-path: polygon(46% 91.5% , 30% 93% , 32% 88% , 26% 86% , 30% 80% , 20% 75% , 29% 68% , 15% 58% , 30% 55% , 10% 35% , 30% 36% , 25% 10% , /*middle*/48% 30% , 75% 10% , 70% 36% , 90% 35% , 70% 55% , 85% 58% , 71% 68% , 80% 75% , 70% 80% , 74% 86% , 68% 88% , 70% 93% , 54% 91.5%);
+	top: -4%;
+}
+
+.head
+{
+	position: relative;
+	width: 35%;
+	height: 60%;
+	border-radius:300px;
+	left: 290px;
+	top: 320px;
+	border: 5px solid #000;
+	background-color: rgb(255,224,189);
+}
+
+.lob_line1
+{
+	position: absolute;
+	top: -40px;
+	left: 80px;
+	width: 150px;
+	height: 140px;
+	border: 5px solid #000;
+	border-color: transparent transparent #000 transparent;
+	border-radius: 0px 0px 30px 30px;
+}
+
+.lob_line2
+{
+	position: absolute;
+	top: 10px;
+	left: 115px;
+	width: 80px;
+	height: 70px;
+	border: 5px solid #000;
+	border-color: transparent transparent #000 transparent;
+}
+
+.eyebrow
+{
+	position: absolute;
+	width: 255px;
+	height: 20px;
+	top: 125px;
+	left: 30px;
+	border-radius: 100px;
+	border: 5px solid #000;
+	background-color: #87CEFA;
+}
+
+.left_eye
+{
+	position: relative;
+	height: 120px;
+	width: 120px;
+	top: 170px;
+	left: 20px;
+	background-color: #ffff;
+	border: 5px solid #000;
+	border-color: rgb(255,224,189) #000 #000 #000;
+	border-radius: 100px;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.eyelid
+{
+	position: relative;
+	height: 45%;
+	width: 92%;
+	border-radius: 60px 60px 0 0;
+	border:5px solid #000;
+	border-color: transparent transparent #000 transparent;
+	background-color: rgb(255,224,189);
+	z-index: 4;
+	animation: close 1s ease 7s alternate;
+}
+
+.iris
+{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 10px;
+	top: 60px;
+	left: 40px;
+	background-color: #000;
+	animation: irismove 6s ease 2s;
+}
+
+.right_eye
+{
+	position: absolute;
+	height: 120px;
+	width: 120px;
+	top: 170px;
+	left: 170px;
+	background-color: #ffff;
+	border: 5px solid #000;
+	border-color: rgb(255,224,189) #000 #000 #000;
+	border-radius: 100px;
+	overflow: hidden;
+	z-index: 5;
+}
+
+.eyeline_left
+{
+	position: absolute;
+	height: 120px;
+	width: 116px;
+	top: 200px;
+	left: 15px;
+	border: 5px solid #000;
+	border-color: transparent transparent #000 transparent;
+	border-radius: 60px;
+}
+
+.eyeline_right
+{
+	position: absolute;
+	height: 120px;
+	width: 116px;
+	top: 200px;
+	left: 180px;
+	border: 5px solid #000;
+	border-color: transparent transparent #000 transparent;
+	border-radius: 60px;
+}
+
+.nose
+{
+	position: absolute;
+	height: 70px;
+	width: 30px;
+	top: 300px;
+	left: 140px;
+	background-color: rgb(255,224,189);
+	border: 5px solid #000;
+	border-color: transparent #000 #000 #000;
+	border-radius: 0 0 35px 35px;
+}
+
+.mouth
+{
+	position: absolute;
+	height: 100px;
+	width: 170px;
+	top: 420px;
+	left: 70px;
+	border: 5px solid #000;
+	border-color: #000 transparent transparent transparent;
+	border-radius: 100px;
+}
+
+.mouthline_left
+{
+	position: absolute;
+	height: 90px;
+	width: 116px;
+	top: 390px;
+	left: 55px;
+	border: 5px solid #000;
+	border-color: transparent transparent transparent #000;
+	border-radius: 60px;
+}
+
+.mouthline_right
+{
+	position: absolute;
+	height: 90px;
+	width: 116px;
+	top: 390px;
+	left: 140px;
+	border: 5px solid #000;
+	border-color: transparent #000 transparent transparent;
+	border-radius: 60px;
+}
+
+.burp
+{
+	position: absolute;
+	width: 30px;
+	height: 60px;
+	top: 425px;
+	left: 170px;
+	background-color: #F0E62C;
+	border-radius: 0 0 30px 30px;
+	animation: burp 3s linear 5s alternate;
+}
+
+/*Animations*/
+
+@keyframes irismove
+{
+	0%{left: 40px;}
+	25%{left: 70px;}
+	75%{left: 50px; top: 100px;}
+	100%{left: 40px;}
+}
+
+@keyframes burp
+{
+	0%{height:60px;}
+	10%{height: 50px;}
+	20%{height: 40px;}
+	30%{height: 30px;}
+	40%{height: 20px;}
+	50%{height: 10px;}
+	60%{height: 0;}
+}
+
+@keyframes close
+{
+	0%{height: 45%;}
+	5%{height: 50%;}
+	10%{height: 55%;}
+	15%{height: 60%;}
+	20%{height: 65%;}
+	25%{height: 70%;}
+	30%{height: 75%;}
+	35%{height: 80%;}
+	40%{height: 85%;}
+	45%{height: 90%;}
+	50%{height: 100%;}
+}
